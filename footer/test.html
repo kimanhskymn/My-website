@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .request-form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: sans-serif;
+    color: #222;
+    padding: 0 20px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-header p {
+    font-size: 13px;
+    font-style: italic;
+    color: #555;
+}
+
+.request-form .form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.request-form .form-group {
+    flex: 1;
+}
+
+.request-form input[type="text"],
+.request-form input[type="email"],
+.request-form input[type="tel"],
+.request-form select,
+.request-form textarea {
+    width: 100%;
+    padding: 14px 15px;
+    background-color: #f1f1f1;
+    border: 2px solid #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #333;
+    box-sizing: border-box;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.request-form input::placeholder,
+.request-form textarea::placeholder {
+    color: #777;
+    font-weight: 600;
+}
+
+.request-form input:focus,
+.request-form select:focus,
+.request-form textarea:focus {
+    background-color: #e9e9e9;
+}
+
+.request-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.request-form textarea {
+    resize: vertical;
+    height: 51px; /* Khớp chiều cao tương đối với input 1 dòng */
+}
+
+.form-checkbox {
+    margin: 20px 0 30px 0;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.form-checkbox label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.form-checkbox a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit button {
+    background-color: #666666;
+    color: #ffffff;
+    border: none;
+    padding: 15px 60px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-submit button:hover {
+    background-color: #505050;
+}
+</style>
+<body>
+    <div class="request-form-container">
+    <div class="form-header">
+        <h2>YÊU CẦU THÊM THÔNG TIN</h2>
+        <p>Các trường bắt buộc được chỉ định bằng dấu hoa thị.</p>
+    </div>
+
+    <form class="request-form">
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" placeholder="*HỌ" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="*TÊN" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <input type="email" placeholder="*ĐỊA CHỈ EMAIL" required>
+            </div>
+            <div class="form-group">
+                <select>
+                    <option value="VIETNAM">VIETNAM</option>
+                    <option value="OTHER">QUỐC GIA KHÁC</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" placeholder="ĐỊA CHỈ">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="THÀNH PHỐ">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <input type="tel" placeholder="SỐ ĐIỆN THOẠI">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="BÌNH LUẬN" rows="2"></textarea>
+            </div>
+        </div>
+
+        <div class="form-checkbox">
+            <label>
+                <input type="checkbox" required>
+                <span>BẰNG CÁCH NHẤP VÀO "GỬI", BẠN ĐÃ ĐỒNG Ý VỚI CÁC ĐIỀU KHOẢN VÀ CHÍNH SÁCH BẢO MẬT CỦA CHÚNG TÔI VÀ ĐỒNG Ý RẰNG CHÚNG TÔI CÓ THỂ THU THẬP THÔNG TIN, SỬ DỤNG VÀ CHUYỂN GIAO DỮ LIỆU CÁ NHÂN CỦA BẠN PHÙ HỢP VỚI <a href="#">CHÍNH SÁCH BẢO MẬT</a> CỦA CHÚNG TÔI.</span>
+            </label>
+        </div>
+
+        <div class="form-submit">
+            <button type="submit">GỬI</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

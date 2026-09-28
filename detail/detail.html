@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <title>Detail</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-flow: dense;
+            gap: 20px;
+        }
+
+        .card img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="/image/image-detail/detail1.png" alt="">
+        </div>
+        <div class="card">
+            <img src="/image/image-detail/detail-2.png" alt="">
+        </div>
+        <div class="card">
+            <img src="/image/image-detail/detail-3.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
